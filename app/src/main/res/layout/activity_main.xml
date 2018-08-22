@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lyt_source"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:background="@color/background"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Нажмите для прогирования ссылки ниже"
+            android:textSize="22sp"
+            android:id="@+id/local_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginStart="8dp"
+            android:text="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+            android:id="@+id/web_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/lyt_source"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/player"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
